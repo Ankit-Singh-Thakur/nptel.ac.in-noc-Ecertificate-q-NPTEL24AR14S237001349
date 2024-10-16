@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .container {
+           height: 200px;
+           border: 3px solid green;
+           position: relative;
+        } */
+        
+        .vertical-center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .vertical-center button {
+          background-color: #3070bf;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        {% for h in home %}
+        <div class="vertical-center">
+         <a href="{{ h.pdf.url }}" target="_blank">
+             <button>
+              Course Certificate
+             </button> 
+         </a>
+        </div>
+        {% endfor %}
+    </div>
+      
+</body>
+</html>
